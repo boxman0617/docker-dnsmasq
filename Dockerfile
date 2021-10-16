@@ -15,7 +15,7 @@ RUN mkdir -p /etc/default/
 RUN echo -e "ENABLED=1\nIGNORE_RESOLVCONF=yes" > /etc/default/dnsmasq
 COPY dnsmasq.conf /etc/dnsmasq.conf
 
-EXPOSE 8080
+EXPOSE 5380
 EXPOSE 53
 
 #run!
