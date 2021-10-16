@@ -5,7 +5,7 @@ ENV WEBPROC_URL https://github.com/jpillora/webproc/releases/download/0.4.0/webp
 # fetch dnsmasq and webproc binary
 RUN apk update \
 	&& apk --no-cache add dnsmasq \
-	&& apk add --no-cache --virtual .build-deps curl bash \
+	&& apk add --no-cache --virtual .build-deps curl bash gzip \
 	&& curl https://i.jpillora.com/webproc | bash \
 	&& apk del .build-deps
 #configure dnsmasq
