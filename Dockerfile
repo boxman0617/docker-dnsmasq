@@ -7,6 +7,7 @@ RUN apk update \
 	&& apk --no-cache add dnsmasq \
 	&& apk add --no-cache --virtual .build-deps curl bash gzip \
 	&& curl https://i.jpillora.com/webproc | bash \
+    && echo $PATH \
 	&& apk del .build-deps
 #configure dnsmasq
 RUN mkdir -p /etc/default/
